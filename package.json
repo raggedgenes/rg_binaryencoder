@@ -1,0 +1,19 @@
+{
+  "name": "@raggedgenes/binaryencoder",
+  "version": "0.0.1",
+  "description": "Encoder utility for RG's binary storage and search",
+  "main": "rg_binaryencoder.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raggedgenes"
+  },
+  "keywords": [
+    "nodejs",
+    "kmer"
+  ],
+  "author": "Szabolcs Makai",
+  "license": "MIT"
+}
