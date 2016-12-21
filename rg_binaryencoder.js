@@ -17,15 +17,15 @@
 		var i = 0;
 		while (seq[i]) {
 			if (!seq[i+3]) return Buffer.from(Uint16Array.from(ta).buffer);
-			var code = new Uint16Array(1);
-			code[0] = __nucls[seq[i]];
+			var code = 0;
+			code = __nucls[seq[i]];
 			var k = 1;
 			while (k < kmer) {
-				code[0] = code[0] << 4;
-				code[0] |= __nucls[seq[i+k]];
+				code = code << 4;
+				code |= __nucls[seq[i+k]];
 				k++;
 			}
-			ta[i] = (code[0]);
+			ta[i] = (code);
 			i++;
 		}
 
@@ -75,7 +75,7 @@
 		utf += decode(t & 15);
 		return utf;
 	}
-
+	//Utils
 	 function dekmerize16bit(kmer) {
 		var utf = "";
 		utf += decode(kmer >> 12);
@@ -99,5 +99,5 @@
 			}
 	}
 
-module.exports = BinaryEncoder;
+	module.exports = BinaryEncoder;
 }).call(this);
